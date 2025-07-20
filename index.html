@@ -14,7 +14,7 @@
 
 <style>
     
-/* Pagina Principal */
+/* PAGINA PRINCIPAL */
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
@@ -32,7 +32,7 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.774)), url('body-img.jpg') center/cover no-repeat;
 }
 
-/* Classe de animaçao */
+/* CLASSE DE ANIMAÇAO */
 
 .animar {
     opacity: 0;
@@ -44,7 +44,7 @@ body {
     transform: translateY(0);
 }
 
-/* Header */
+/* HEADER */
 
 .header {
     color: white;
@@ -83,7 +83,7 @@ body {
     transition: color 0.3s ease;
 }
 
-/* Botao Tema */
+/* BOTAO TEMA */
 
 #botao-tema {
     position: fixed;
@@ -104,7 +104,7 @@ body {
     box-shadow: 0px 0px 10px #7f33cf;
 }
 
-/* Main */
+/* MAIN */
 
 .main {
     display: flex;
@@ -141,7 +141,7 @@ body {
     box-shadow: 0px 0px 5px #7f33cf;
 }
 
-/* Section Sobre / IMG */
+/* SECTION SOBRE / IMG */
 
 .sobre {
     display: flex;
@@ -170,7 +170,7 @@ body {
     object-fit: cover;
 }
 
-/* Soft Skills */
+/* SOFT SKILLS */
 
 .st-skills h3 {
     color: white;
@@ -206,7 +206,7 @@ body {
     box-shadow: 0px 0px 10px #7f33cf;
 }
 
-/* Contatos */
+/* CONTATOS */
 
 .contactar {
     display: flex;
@@ -239,7 +239,7 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Footer */
+/* FOOTER */
 
 .footer {
     color: white;
@@ -253,7 +253,7 @@ body {
     font-weight: bolder;
 }
 
-/* Modo Claro */
+/* MODO CLARO */
 
 body.modo-claro {
     background: url('body-img.jpg') center/cover no-repeat;
@@ -309,11 +309,87 @@ body.modo-claro {
     transition: all 0.7s ease;
 }
 
+/* RESPONSIVIDADE */
+
+/* Celulares menores possiveis */
+@media(max-width:380px) {
+    .logo {
+        font-size: x-large;
+        position: relative;
+        right: 10%;
+    }
+    .main img {
+        width: 100px;
+        height: 100px;
+        margin-left: 10%;
+    }
+    .header i {
+        display: none;
+    }
+    #botao-tema {
+        position: fixed;
+        right: 5%;
+    }
+    .footer {
+        font-size: x-small;
+    }
+    .contactar {
+        margin-top: 35%;
+        text-align: center;
+    }
+    .icones-ctts {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+    }
+
+}
+
+/* Celulares Menores */
+@media(max-width:480px) {
+    .introduçao-grid .grid p {
+        font-size: x-small;
+    }
+    .grid h3 {
+        font-size: medium;
+    }
+    .links {
+        font-size: x-small;
+        gap: 9px;
+    }
+    .main h2 {
+        font-size: 20px;
+    }
+    .sobre p {
+        font-size: small;
+    }
+    .sobre h3 {
+        font-size: x-large;
+    }
+    .sobre img {
+        display: none;
+    }
+    #botao-tema {
+        font-size: xx-small;
+    }
+    .contactar h3, .st-skills > h3 {
+        font-size: larger;
+    }
+    .st-grid {
+        grid-template-columns: 1fr;
+        margin: 0 20px;
+    }
+    .st-grid p {
+        font-size: small;
+    }
+}
+
+
 </style>
 
 <body>
     
-    <!-- Header -->
+    <!-- HEADER -->
     <header class="header">
         
         <h1 class="logo">LP</h1>
@@ -327,7 +403,7 @@ body.modo-claro {
         </nav>
 
         <div class="header-ctts">
-            <!-- zap -->
+            <!-- ZAP -->
             <a href="https://wa.me/5531997045547">
                 <i>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
@@ -337,7 +413,7 @@ body.modo-claro {
                 </i>
             </a>
 
-            <!-- github -->
+            <!-- GITHUB -->
             <a href="https://github.com/Lukinhasxz">
                 <i>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
@@ -347,7 +423,7 @@ body.modo-claro {
                 </i>
             </a>
             
-            <!-- linkedin -->
+            <!-- LINKEDIN -->
             <a href="https://www.linkedin.com/in/lucas-paglioto-40625a342/">
                 <i>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
@@ -359,10 +435,10 @@ body.modo-claro {
         </div>
     </header>
 
-    <!-- botao tema -->
+    <!-- BOTAO TEMA -->
      <button id="botao-tema">🌙</button>
 
-    <!-- main -->
+    <!-- MAIN -->
     <main class="main">
         
         <div class="mensagem-main">
@@ -376,7 +452,7 @@ body.modo-claro {
 
     </main>
 
-    <!-- introdução -->
+    <!-- INTRODUÇÃO -->
 
     <section class="sobre animar">
         
@@ -396,7 +472,7 @@ body.modo-claro {
 
     </section>
 
-    <!-- soft skills -->
+    <!-- SOFT SKILLS -->
     <section class="st-skills animar">
         <h3>Soft Skills</h3> 
 
@@ -429,13 +505,13 @@ body.modo-claro {
         </div>
     </section>
 
-     <!-- contactar -->
+     <!-- CONTACTAR -->
     <section class="contactar animar">
 
         <h3>Se sinta livre para me contactar</h3>
 
         <div class="icones-ctts">
-            <!-- zap -->
+            <!-- ZAP -->
             <a href="https://wa.me/5531997045547">
                 <i>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
@@ -445,7 +521,7 @@ body.modo-claro {
                 </i>
             </a>
 
-            <!-- github -->
+            <!-- GITHUB -->
             <a href="https://github.com/Lukinhasxz">
                 <i>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
@@ -455,7 +531,7 @@ body.modo-claro {
                 </i>
             </a>
             
-            <!-- linkedin -->
+            <!-- LINKEDIN -->
             <a href="https://www.linkedin.com/in/lucas-paglioto-40625a342/">
                 <i>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
@@ -468,9 +544,9 @@ body.modo-claro {
 
     </section>
 
-    <!-- formulario e-mail -->
+    <!-- FORMULARIO E-MAIL -->
 
-    <!-- footer -->
+    <!-- FOOTER -->
     <footer class="footer">
         <p>@2025 Criado Por Lucas Paglioto</p>
     </footer>
@@ -479,7 +555,7 @@ body.modo-claro {
 
 <script>
 
-    //criando tema claro 
+    //CRIANDO TEMA CLARO 
     const botaoTema = document.getElementById('botao-tema')
 
         botaoTema.addEventListener('click', () => {
@@ -493,7 +569,7 @@ body.modo-claro {
     })
     
 
-    // animaçao de carregamento
+    // ANIMAÇAO DE CARREGAMENTO
     function animarScroll(){
         const objetosAnimados = document.querySelectorAll('.animar')
 
@@ -508,7 +584,7 @@ body.modo-claro {
     }
 
     window.addEventListener('scroll', animarScroll)
-    window.addEventListener('DOMContentLoaded', animarScroll)
+    window.addEventListener('DOMContentLoaded', animarScroll) 
 
 
 </script>
