@@ -36,6 +36,18 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.774)), url('body-img.jpg') center/cover no-repeat;
 }
 
+/* CLASSE DE ANIMAÇAO */
+
+.animar {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+.animar.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Header */
 
 header {
@@ -324,6 +336,9 @@ body.modo-claro {
         position: fixed;
         right: 5%;
     }
+    .footer {
+        font-size: x-small;
+    }
 }
 
 </style>
@@ -380,7 +395,7 @@ body.modo-claro {
     <button id="botao-tema">🌙</button>
 
     <!-- MAIN -->
-    <main class="main">
+    <main class="main animar">
 
         <h1>Bem-Vindo á Minha introdução!</h1>
 
@@ -408,7 +423,7 @@ body.modo-claro {
     </main>
 
     <!-- SOBRE MIM -->
-    <section class="sobre">
+    <section class="sobre animar">
 
         <h2>Sobre Mim</h2>
 
@@ -424,7 +439,7 @@ body.modo-claro {
     </section>
 
     <!-- SOBRE MIM -->
-    <section class="gostos">
+    <section class="gostos animar">
 
         <h2>Meus Hobbys</h2>
 
@@ -440,7 +455,7 @@ body.modo-claro {
     </section>
 
     <!-- SOBRE MIM -->
-    <section class="vontades">
+    <section class="vontades animar">
 
         <h2>Vontades</h2>
 
@@ -465,7 +480,7 @@ body.modo-claro {
 
 <script>
 
-    //criando tema claro 
+    //CRIANDO TEMA CLARO 
     const botaoTema = document.getElementById('botao-tema')
 
         botaoTema.addEventListener('click', () => {
@@ -477,6 +492,24 @@ body.modo-claro {
             botaoTema.textContent = '🌙'
         }
     })
+
+    // ANIMAÇAO DE CARREGAMENTO
+    function animarScroll(){
+        const objetosAnimados = document.querySelectorAll('.animar')
+
+        objetosAnimados.forEach(objeto => {
+            const topoObjetos = objeto.getBoundingClientRect().top
+            const alturaTela = window.innerHeight
+
+            if(topoObjetos < alturaTela) {
+                objeto.classList.add('mostrar')
+            }
+        })
+    }
+
+    window.addEventListener('scroll', animarScroll)
+    window.addEventListener('DOMContentLoaded', animarScroll) 
+
 
 </script>
 
