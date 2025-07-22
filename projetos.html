@@ -244,6 +244,7 @@ header {
 .grid-projetos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
 }
 .projeto:hover {
     transform: translateY(5px);
@@ -368,97 +369,56 @@ header {
 
 /* RESPONSIVIDADE */
 
-/* TELAS MAIORES */
-
-@media(max-width:1200px) {
+/* LAPTOPS */
+@media (max-width:1366px) {
     .grid-projetos {
         grid-template-columns: 1fr;
     }
 }
 
-/* Tablets */
-@media(max-width:720px) {
+/* TABLETS */
+@media (max-width:768px) {
+    .header {
+        flex-direction: column;
+    }
+    #botao-tema {
+        top: 5%;
+    }
+
+    .links {
+        margin: 10px;
+    }
     .introduçao-grid {
         grid-template-columns: 1fr;
     }
-    .main h1{
-        font-size: x-large;
-    }
-    .links {
-        font-size: small;
-    }
-    .main h2 {
-        font-size: x-large;
-    }
-    #botao-tema {
-        font-size: small;
-    }
+
 }
 
 /* Celulares */
-@media(max-width:520px) {
-    .main h1{
+@media (max-width:600px) {
+    .grid-ferramentas, .grid-skills, .grid-skillsA {
+        grid-template-columns: 1fr;
+    }
+    #botao-tema {
         font-size: medium;
+        right: 5%;
     }
-    .links {
-        font-size: x-small;
+    .projeto img {
+        width: 90px;
+        height: 90px;
     }
-    .main h2 {
-        font-size: medium;
+    .projeto p {
+        font-size: smaller;
     }
-    .grid-ferramentas {
-        grid-template-columns: 1fr;
-    }
-    .grid-skills {
-        grid-template-columns: 1fr;
-    }
-    .grid-skillsA {
-        grid-template-columns: 1fr;
+    .botoesR button {
+        padding: 10px;
     }
 }
 
 /* Celulares Menores */
-@media(max-width:480px) {
-    .main h1{
-        font-size: small;
-    }
-    .introduçao-grid .grid p {
-        font-size: x-small;
-    }
-    .grid h3 {
-        font-size: medium;
-    }
-    .links {
-        font-size: x-small;
-        gap: 9px;
-    }
-    .main h2 {
-        font-size: small;
-    }
+@media (max-width:360px) {
     #botao-tema {
-        font-size: xx-small;
-    }
-    .ferramentas h3, .skills h3, .skillsA h3, .projetos h3 {
-        font-size: x-large;
-    }
-
-}
-/* Celulares menores possiveis */
-@media(max-width:380px) {    
-    .logo {
-        font-size: x-large;
-        position: relative;
-        right: 10%;
-    }
-    .header i {
-        display: none;
-    }
-    #botao-tema {
-        position: fixed;
-        right: 5%;
-    }
-    .footer {
-        font-size: x-small;
+        top: 2%;
     }
 }
 
