@@ -247,97 +247,41 @@ body.modo-claro {
     transition: all 0.7s ease;
 }
 
-/* Media */
+/* RESPONSIVIDADE */
 
-/* Tablets */
-@media(max-width:720px) {
+
+/* TABLETS */
+@media (max-width:768px) {
+    .header {
+        flex-direction: column;
+    }
+    #botao-tema {
+        top: 5%;
+    }
+
+    .links {
+        margin: 10px;
+    }
     .introduçao-grid {
         grid-template-columns: 1fr;
     }
-    .main h1{
-        font-size: x-large;
-    }
-    .links {
-        font-size: small;
-    }
-    .gostos h2, .vontades h2, .sobre h2 {
-        font-size: x-large;
-    }
-    .gostos p, .vontades p, .sobre p {
-        font-size: small;
-    }
-    .main h2 {
-        font-size: x-large;
-    }
-    #botao-tema {
+    .sobre p, .gostos p, .vontades p{
         font-size: small;
     }
 }
 
 /* Celulares */
-@media(max-width:520px) {
-    .main h1{
+@media (max-width:600px) {
+    #botao-tema {
         font-size: medium;
-    }
-    .links {
-        font-size: x-small;
-    }
-    .gostos h2, .vontades h2, .sobre h2 {
-        font-size: medium;
-    }
-    .gostos p, .vontades p, .sobre p {
-        font-size: x-small;
-    }
-    .main h2 {
-        font-size: medium;
+        right: 5%;
     }
 }
 
 /* Celulares Menores */
-@media(max-width:480px) {
-    .main h1{
-        font-size: small;
-    }
-    .introduçao-grid .grid p {
-        font-size: x-small;
-    }
-    .grid h3 {
-        font-size: medium;
-    }
-    .links {
-        font-size: x-small;
-        gap: 9px;
-    }
-    .gostos h2, .vontades h2, .sobre h2 {
-        font-size: small;
-    }
-    .gostos p, .vontades p, .sobre p {
-        font-size: xx-small;
-    }
-    .main h2 {
-        font-size: small;
-    }
+@media (max-width:360px) {
     #botao-tema {
-        font-size: xx-small;
-    }
-}
-
-/* Celulares menores possiveis */
-@media(max-width:380px) {
-    .logo {
-        font-size: x-large;
-        position: relative;
-        right: 10%;
-    }
-    .header i {
-        display: none;
-    }
-    #botao-tema {
-        position: fixed;
-        right: 5%;
-    }
-    .footer {
-        font-size: x-small;
+        top: 2%;
     }
 }
 
