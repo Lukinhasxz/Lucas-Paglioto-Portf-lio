@@ -113,7 +113,7 @@ body {
     color: white;
     margin: 50px;
     justify-content: center;
-    margin-left: 15%;
+    padding-left: 10px;
 }
 .main p {
     font-weight: bolder;
@@ -219,6 +219,7 @@ body {
     bottom: 70px;
 }
 .contactar h3 {
+    text-align: center;
     text-transform: uppercase;
     font-size: 40px;
     margin: 30px;
@@ -311,76 +312,82 @@ body.modo-claro {
 
 /* RESPONSIVIDADE */
 
-/* Celulares menores possiveis */
-@media(max-width:380px) {
-    .logo {
-        font-size: x-large;
-        position: relative;
-        right: 10%;
+/* LAPTOPS */
+@media (max-width:1366px) {
+    .st-grid {
+        grid-template-columns: 1fr;
+        margin: 30px;
     }
-    .main img {
-        width: 100px;
-        height: 100px;
-        margin-left: 10%;
-    }
-    .header i {
-        display: none;
-    }
-    #botao-tema {
-        position: fixed;
-        right: 5%;
-    }
-    .footer {
-        font-size: x-small;
-    }
-    .contactar {
-        margin-top: 35%;
-        text-align: center;
-    }
-    .icones-ctts {
-        display: flex;
-        gap: 30px;
-        flex-direction: column;
-    }
-
 }
 
-/* Celulares Menores */
-@media(max-width:480px) {
-    .introduçao-grid .grid p {
-        font-size: x-small;
-    }
-    .grid h3 {
-        font-size: medium;
+/* TABLETS */
+@media (max-width:768px) {
+    .header {
+        flex-direction: column;
     }
     .links {
-        font-size: x-small;
-        gap: 9px;
-    }
-    .main h2 {
-        font-size: 20px;
-    }
-    .sobre p {
-        font-size: small;
-    }
-    .sobre h3 {
-        font-size: x-large;
-    }
-    .sobre img {
-        display: none;
+        margin: 10px;
     }
     #botao-tema {
-        font-size: xx-small;
+        top: 5%;
     }
-    .contactar h3, .st-skills > h3 {
-        font-size: larger;
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+    .minha-imagem {
+        padding-top: 10px;
     }
     .st-grid {
         grid-template-columns: 1fr;
-        margin: 0 20px;
     }
-    .st-grid p {
+    .sobre {
+        gap: 0;
+        flex-direction: column;
+    }
+    .sobre img {
+        width: 90%;
+    }
+}
+
+/* Celulares */
+@media (max-width:480px) {
+    .introduce-img {
+        display: none;
+    }
+    #botao-tema {
+        font-size: medium;
+        right: 5%;
+    }
+    .main {
         font-size: small;
+        line-height: 1.2;
+    }
+    .main h2 {
+        font-size: xx-large;
+    }
+    .st-skills h3, .contactar h3, .sobre h3 {
+        font-size: xx-large;
+    }
+    .icones-ctts {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contactar {
+        padding-top: 20%;
+    }
+}
+
+/* Celulares Menores */
+@media (max-width:360px) {
+    .main h2 {
+        font-size: x-large;
+    }
+    #botao-tema {
+        top: 2%;
+    }
+    .contactar {
+        padding-top: 35%;
     }
 }
 
@@ -544,8 +551,6 @@ body.modo-claro {
 
     </section>
 
-    <!-- FORMULARIO E-MAIL -->
-
     <!-- FOOTER -->
     <footer class="footer">
         <p>@2025 Criado Por Lucas Paglioto</p>
@@ -574,6 +579,7 @@ body.modo-claro {
         const objetosAnimados = document.querySelectorAll('.animar')
 
         objetosAnimados.forEach(objeto => {
+
             const topoObjetos = objeto.getBoundingClientRect().top
             const alturaTela = window.innerHeight
 
